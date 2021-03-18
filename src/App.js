@@ -8,11 +8,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Foods from './components/Foods/Foods';
+import Services from './components/Services/Services';
 
 function App() {
   return (
     <Router>
-      <Header/>
+      <Header />
+      <Foods />
+      <Services />
     </Router>
   );
 }

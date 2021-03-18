@@ -1,0 +1,9 @@
+.food-card{
+    transition: all .5s;
+}
+.food-card:hover {
+  border: 1px solid black;
+  box-shadow: -5px 0px 20px 5px #b6b6b6, 5px 0px 20px 5px #b6b6b6, 0px -5px 20px 5px #b6b6b6,
+    0px 5px 20px 5px #b6b6b6;
+    transform: scale(1.1);
+}

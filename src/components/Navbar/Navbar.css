@@ -1,0 +1,13 @@
+nav div .onion-btn, div .onion-btn{
+    border-radius: 2rem;
+    padding: .375rem 2rem;
+}
+
+.shopping-cart{
+    color: black;
+    transition: all 1s;
+}
+.shopping-cart:hover{
+    color: gray;
+    transform: scale(1.2)
+}

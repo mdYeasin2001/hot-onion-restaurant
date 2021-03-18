@@ -1,0 +1,13 @@
+.foods-category{
+    display: flex;
+    justify-content: center;
+}
+.foods-category .food-type{
+    margin: 0rem 1rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+.foods-category .food-type:active{
+    text-decoration: underline;
+}
