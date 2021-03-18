@@ -18,9 +18,9 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
-                        <Link className="nav-link mb-3 mx-2" aria-current="page" to="/"><FontAwesomeIcon icon={faShoppingCart} className="fs-5 shopping-cart" /></Link>
-                        <Link className="btn btn-outline-danger mb-3 mx-2 onion-btn" aria-current="page" to="/">Login</Link>
-                        <Link className="btn btn-danger mb-3 mx-2 onion-btn" to="/">Sign up</Link>
+                        <Link className="nav-link mb-3 mx-2" aria-current="page" to="/cart"><FontAwesomeIcon icon={faShoppingCart} className="fs-5 shopping-cart" /></Link>
+                        <Link className="btn btn-outline-danger mb-3 mx-2 onion-btn" aria-current="page" to="/Login">Login</Link>
+                        <Link className="btn btn-danger mb-3 mx-2 onion-btn" to="/signIn">Sign up</Link>
                     </div>
                 </div>
             </div>
