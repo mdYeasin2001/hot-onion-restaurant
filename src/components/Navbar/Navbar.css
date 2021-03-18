@@ -2,7 +2,9 @@ nav div .onion-btn, div .onion-btn{
     border-radius: 2rem;
     padding: .375rem 2rem;
 }
-
+.logo{
+    width: 12rem;
+}
 .shopping-cart{
     color: black;
     transition: all 1s;

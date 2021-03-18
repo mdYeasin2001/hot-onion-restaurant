@@ -10,9 +10,9 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-white mx-5">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white mx-md-5">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/"><img className="w-25" src={logo2} alt="logo"/></a>
+                <Link className="navbar-brand" to="/"><img className="logo" src={logo2} alt="logo"/></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

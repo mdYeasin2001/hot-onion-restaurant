@@ -10,7 +10,7 @@ const Services = () => {
             <h2 className="display-6">Why You Choose Us</h2>
             <p className="lead">Barton waited twenty always repair in within we do. An delighted offending <br /> curiosity my is dashwoods at. Boy prosperous increasing surrounded.</p>
             </div>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-5">
                 <div className="col">
                     <div className="card services-card">
                         <img src="https://images.unsplash.com/photo-1585759071429-1646f76ab8c7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8ZGVsaXZlcnklMjBtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="..." />
