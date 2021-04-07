@@ -1,5 +1,6 @@
 .food-card{
     transition: all .5s;
+    cursor: pointer;
 }
 .food-card:hover {
   border: 1px solid black;

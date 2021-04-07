@@ -13,7 +13,7 @@ const Food = ({food}) => {
         <div className="col">
             <div onClick={foodDetails} className="card mx-4 h-100 border-0 food-card">
                 <img className="img-fluid p-2" src={strMealThumb} alt="food-pic"/>
-                <div className="card-body text-end">
+                <div className="card-body">
                     <h4 className="card-title">{strMeal}</h4>
                     <h6 className="text-muted">Category: {strCategory}</h6>
                     <h6 className="text-muted">Area: {strArea}</h6>

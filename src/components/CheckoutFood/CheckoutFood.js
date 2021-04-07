@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CheckoutFood = ({ food }) => {
-    const { strMealThumb, strMeal } = food
+    const { strMealThumb, strMeal , quantity} = food
     return (
         <div className="d-flex justify-content-between align-items-center bg-light shadow p-2 rounded mb-3">
             <img className="img-fluid w-25" src={strMealThumb} alt="meal thumb" />
@@ -11,7 +11,7 @@ const CheckoutFood = ({ food }) => {
                 <h6 className="text-muted">Delivery free</h6>
             </div>
             <div>
-                <h3>- 1 +</h3>
+                <h3>- {quantity} +</h3>
             </div>
         </div>
     );

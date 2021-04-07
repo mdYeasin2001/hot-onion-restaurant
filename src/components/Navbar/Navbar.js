@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import logo2 from '../../images/logo2.png';
 import './Navbar.css';
 import { UserTypeContext } from '../../UserTypeContext';
@@ -14,12 +14,15 @@ import { FiLogOut } from 'react-icons/fi';
 import firebase from "firebase/app";
 import "firebase/auth";
 import Avatar from '@material-ui/core/Avatar';
+import { CartFoodsContext } from '../../CartFoodsContext';
 
 
 
 const Navbar = () => {
+    const history = useHistory();
     const [newUser, setNewUser] = useContext(UserTypeContext);
     const [loggedInUser, setLoggedInUser] = useContext(LoggedInUserContext);
+    const [addedCartFoods, setAddedCartFoods] = useContext(CartFoodsContext);
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -49,7 +52,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
                         <Link className="nav-link mb-3 mx-2" aria-current="page" to="/cart">
-                            <Badge badgeContent={0} color="secondary">
+                            <Badge badgeContent={addedCartFoods.length} color="secondary">
                                 <ShoppingCartIcon />
                             </Badge>
                         </Link>
@@ -89,7 +92,7 @@ const Navbar = () => {
                                     {loggedInUser.name && <h4 className="px-5">{loggedInUser.name}</h4>}
                                     <hr className="text-secondary" />
                                     <MenuItem>Profile</MenuItem>
-                                    <MenuItem>Your Orders</MenuItem>
+                                    <MenuItem onClick={() => history.push('/orders')}>Your Orders</MenuItem>
                                     <MenuItem onClick={handleLogout}><FiLogOut className="me-2" />Logout</MenuItem>
                                 </Menu>
                             </div>
