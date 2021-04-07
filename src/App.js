@@ -11,51 +11,55 @@ import FoodDetails from "./components/FoodDetails/FoodDetails";
 import SignIn from "./components/SignIn/SignIn";
 import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
-import Login from "./components/Login/Login";
+import { UserTypeProvider } from "./UserTypeContext";
+import { LoggedInUserProvider } from "./LoggedInUserContext";
+import CheckOut from "./components/CheckOut/CheckOut";
 import Cart from "./components/Cart/Cart";
+import PrivateRoute from "./PrivateRoute";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <FoodCategoryProvider>
-        <Switch>
-          <Route exact path="/">
-            <Banner />
-            <FoodCategory />
-            <Foods />
-            <Services />
-            <Footer />
-          </Route>
-          <Route path="/breakfast">
-            <Banner />
-            <FoodCategory />
-            <Foods />
-          </Route>
-          <Route path="/soup">
-            <Banner />
-            <FoodCategory />
-            <Foods />
-          </Route>
-          <Route path="/chicken">
-            <Banner />
-            <FoodCategory />
-            <Foods />
-          </Route>
-          <Route path="/signIn">
-            <SignIn />
-          </Route>
-          <Route path="/login">
-            <Login/>
-          </Route>
-          <Route path="/cart">
-            <Cart/>
-          </Route>
-          <Route path="/foods/foodDetails/:idFood">
-            <FoodDetails />
-          </Route>
-        </Switch>
-      </FoodCategoryProvider>
+      <LoggedInUserProvider>
+        <UserTypeProvider>
+          <Navbar />
+          <FoodCategoryProvider>
+            <Switch>
+              <Route exact path="/">
+                <Banner />
+                <FoodCategory />
+                <Foods />
+                <Services />
+                <Footer />
+              </Route>
+              <Route path="/breakfast">
+                <Banner />
+                <FoodCategory />
+                <Foods />
+              </Route>
+              <Route path="/soup">
+                <Banner />
+                <FoodCategory />
+                <Foods />
+              </Route>
+              <Route path="/chicken">
+                <Banner />
+                <FoodCategory />
+                <Foods />
+              </Route>
+              <Route path="/login">
+                <SignIn />
+              </Route>
+              <PrivateRoute path="/cart">
+                <Cart/>
+              </PrivateRoute>
+              <PrivateRoute path="/foods/foodDetails/:idFood">
+                <FoodDetails />
+              </PrivateRoute>
+            </Switch>
+          </FoodCategoryProvider>
+        </UserTypeProvider>
+      </LoggedInUserProvider>
     </Router>
   );
 }

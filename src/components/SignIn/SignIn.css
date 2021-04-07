@@ -1,6 +1,10 @@
 .sign-in{
     background: url('../../images/bannerbackground.png') no-repeat;
-    height: 100vh;
+    height: 110vh;
     background-size: cover;
     background-position: center center;
 }
+.toggler-log-sign-in{
+    cursor: pointer;
+}
+
